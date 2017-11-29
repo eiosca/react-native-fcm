@@ -167,7 +167,7 @@ RCT_EXPORT_MODULE();
     if (response.actionIdentifier) {
         [data setValue:response.actionIdentifier forKey:@"_actionIdentifier"];
     }
-    [[NSNotificationCenter defaultCenter] postNotificationName:FCMNotificationReceived object:self userInfo:@{@"data": data, @"completionHandler": completionHandler}];
+    [[NSNotificationCenter defaultCenter] postNotificationName:FCMNotificationReceived object:self userInfo:@{@"data": data}];
 }
 
 + (void)willPresentNotification:(UNNotification *)notification withCompletionHandler:(nonnull RCTWillPresentNotificationCallback)completionHandler
